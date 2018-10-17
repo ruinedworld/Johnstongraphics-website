@@ -1,0 +1,440 @@
+/* CSS document for Specter Website */
+
+/*
+Design and styled by: Mike Johnston
+University Library System | University of Pittsburgh
+*/
+
+/*Reset Typography*/
+@import url("../css/normalize.css");
+
+/*GLOBAL Typography *********************************************************************************************************************/
+
+body { font: 62.5% Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left; color: #000; }
+p, dl, hr, h1, h2, h3, h4, h5, h6, ul, ol, pre, table, address, fieldset { font-size: 1.5em; margin: 0 0 10px 0; }
+blockquote { font-size: 1.5em; text-align: center; }
+
+p { line-height: 27px;}
+
+/* Links */
+a:link { color: #3f84a9; text-decoration: underline; }
+a:hover { color: #0d1c24; text-decoration: underline; }
+a:visited { color: #3f84a9; text-decoration: underline; }
+
+/* Headings */
+h1 { font-size: 4.2em; margin: 10px 10px 10px 0; padding: 0; line-height: 30px; }
+h2 { font-size: 3.0em; margin: 20px 0 10px 0; padding: 0; color: #000; border-bottom:#000 1px solid; }
+h2.buyart { display: inline-block; width: 100px;}
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.8em; margin: 0px 0 10px 0; padding: 10px 5px; }
+#footerbar h4 { font-size: 1.8em; margin: 0px 0 10px 0; padding: 10px 5px; color: #B6B6B6; }
+h5 { font-size: 1.0em; font-weight: normal; }
+h6 { font-size: 1.2em; text-align: center; background: #000; padding: 5px; margin: 0px; }
+
+/* Lists */ 
+ul, ol { list-style-type: none; margin: 5px 5px 10px 5px; padding: 0; font-weight: bold; }
+ol ol, ul ul, ul ol, ol ul { list-style-type: disc; margin: 10px 0 10px 20px; font-size: 1.0em; }
+li { margin: 5px 0 5px 20px; font-weight: normal; line-height: 20px;   }
+
+/* Misc typography classes */ 
+.caption { margin-top: -1em; font-size: 1.2em; font-weight: bold; }
+.strike { text-decoration: line-through; }
+.clearfloat { clear: both; height: 0; font-size: 1px; line-height: 0px;}
+
+@media only screen and (max-width: 480px) {
+
+p, dl, hr, h1, h2, h3, h4, h5, h6, ul, ol, pre, table, address, fieldset {
+    font-size: 2em;
+    margin: 0 0 5px 0;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0px 10px 20px 0;
+    padding: 0;
+    line-height: 30px;
+}
+	
+}
+
+/*Control Classes***********************************************************************************************************************/
+
+.maxw {	max-width: 100%; margin: 0 auto; }
+ 
+ 
+/* Site Structure ***********************************************************************************************************************/
+
+html { overflow-y: scroll; }
+
+body {
+	padding: 0;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+#content-wrapper {
+	margin: 0;
+	margin-top: 50px;
+	padding: 0;
+	transition: margin-left .5s;
+}
+
+#pittbar {
+	width: 100%;
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #fff;
+	top: 0;
+	z-index: 100;
+    position: fixed;
+    right: 0;
+}
+
+#header {
+	width: 100%;
+	padding: 0px;
+	margin: 0px auto;
+	z-index:10;
+	position: relative;
+}
+
+#logobrand {
+	height: 45px;
+	float: right;
+	display: inline;
+}
+
+.headtitle {
+	color: #fff;
+	text-indent: 100%;
+	
+	 }
+
+	  .header-name-fadein {
+		  -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+		  -moz-animation: fadein 5s; /* Firefox < 16 */
+		  -ms-animation: fadein 5s; /* Internet Explorer */
+		  -o-animation: fadein 5s; /* Opera < 12.1 */
+		  animation: fadein 5s;
+	  }
+	  
+/*Logo fade in function**************************************************************************************/
+			@keyframes fadein {
+			 from {opacity: 0;}
+			 to {opacity: 1;}
+			 }
+			
+			/* Firefox < 16 */
+			@-moz-keyframes fadein {
+			 from {opacity: 0;}
+			 to {opacity: 1;}
+			}
+			
+			/* Safari, Chrome and Opera > 12.1 */
+			@-webkit-keyframes fadein {
+			 from {opacity: 0;}
+			 to {opacity: 1;}
+			}
+			
+			/* Internet Explorer */
+			@-ms-keyframes fadein {
+			 from {opacity: 0;}
+			 to {opacity: 1;}
+			}
+			
+			/* Opera < 12.1 */
+			@-o-keyframes fadein {
+			 from {opacity: 0;}
+			 to {opacity: 1;}
+			}
+
+
+/*Image banner************************************************************************************************************/	
+
+.imgbanner {
+	height: 371px;
+	width: 100%;
+	padding: 3px 0px 0px 0px;
+	margin: 0px;
+	background-image: url(../images/mikejohnston_ruinedworld_sketch_morningswamp_opt.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position: top;
+	display: inherit; 
+	
+	-webkit-box-shadow: 0px 2px 10px #000000;
+	-moz-box-shadow: 0px 2px 10px #000000;
+	box-shadow: 0px 2px 10px #000000;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+#pittbar {
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 10px 0px;
+}
+
+#header {
+	display: none;
+}	
+
+#header-name {
+    width: 100%;
+    height: 104px;
+    margin: 0px auto 25px auto;
+    background-color: #022246;
+    float: none;
+    position: relative;
+    z-index: 100;
+
+}
+
+#logobrand {
+    width: 100%;
+    height: 45px;
+    float: right;
+    display: inline;
+}
+
+#logobrand h1{
+    font-size: 8.5vw;
+    margin: 10px 10px 10px 0;
+    padding: 0;
+    line-height: 30px;
+	text-align: center;
+}
+	
+}
+
+/*Content**************************************************************************************/
+
+#inner-content-wrapper {
+	width: 100%;
+/*	background-color: #fff;*/
+	padding: 10px 0px 15px 0px;
+	position: relative;
+}
+
+#content {
+	margin: 0 auto;
+	margin: 0px auto;
+	padding: 1%;
+}
+
+#content-left {
+	width: 70%;
+	padding: 10px;
+	float: left;
+}
+
+#content-full {
+	width: 98%;
+	padding: 10px;
+	float: none;
+}
+
+#content-sidebar1 {
+	width: 25%;
+	min-height: 290px;
+	margin: 30px 0px 20px 0px;
+	padding: 0px 0px 10px 0px;
+	background-color: #cccccc;
+	float: right;
+	display: block;
+}
+
+#content-sidebar1 > h4 { background-color: #000; color: #fff; } 
+
+#video-wrapper {  }
+
+@media only screen and (max-width: 480px) {
+
+#content-left {
+	width: 100%;
+	float: none;
+}
+
+#content-full {
+    width: 98%;
+    padding: 10px;
+    margin: 27px 0 0px 0;
+    float: none;
+}
+
+#content-sidebar1 { display: none; }
+}
+
+
+/*Logo**********************************************************/
+
+
+/*Navigation ***********************************************************************************************************************************************/
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 200; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	color: #818181;
+	white-space: nowrap;
+}
+
+ul.sidnavlist {
+    margin: 5px 0px 20px 21px;
+    font-size: 2.0em;
+}
+
+.sidnavlist li {
+    margin: 5px 0px -2px 21px;
+    font-size: 68%;
+    background-color: #dcdcdc;
+    color: #000;
+}
+
+
+/* The navigation menu links */
+.sidenav a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+	    padding: 4.2px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #fff;
+    background-color: #828282;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0px;
+    /* right: 25px; */
+    font-size: 31px;
+    PADDING: 6px 0;
+    display: block;
+    width: 100%;
+    color: #B3B3B3;
+}
+
+.opnbutnav {
+    font-size: 32px;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebarimage {
+	width: 100%;
+	height: auto;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+a#home { display: none; !important }
+
+}
+
+/*Portfolio Grid************************************************************************************************/
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1%;
+	background-color: #000;
+	height: 200px;
+	overflow:hidden;
+	display: flex;
+    justify-content: center;
+  
+    outline: 2px solid #000;
+    outline-offset: -2px;
+}
+
+.col img {
+
+}
+
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF FOUR  **************************************************/
+.span_4_of_4 { width: 21.45%; }
+.span_3_of_4 { width: 32.65%;}
+
+.span_2_of_4 { width: 49.5%; }
+.span_1_of_4 { width: 15.83%; }
+
+.span_0_of_4 { width: 24.25%; }
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+/* Style the Image Used to Trigger the lightbox *******************************************************************/
+img.thumb:hover, img.thumb:focus {
+    opacity: 0.5;
+    transition: 0.8s;
+    outline: 1px solid #fff;
+    outline-offset: -18px;
+}
+
+/*Footer********************************************************************************************************/
+
+#footer {
+    width: 100%;
+    height: 67px;
+    padding: 29px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+#footer a:link {
+    color: #fff;
+    text-decoration: none;
+}
+#footer a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+#footer a:hover {
+    color: #ACACAC;
+    text-decoration: underline;
+}
